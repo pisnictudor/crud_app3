@@ -1,0 +1,31 @@
+mysql://b4d1b5495faff0:e39f2731@us-cluster-east-01.k8s.cleardb.net/heroku_e716d8192725226?reconnect=true
+
+hostname: us-cluster-east-01.k8s.cleardb.net
+user: b4d1b5495faff0
+password: e39f2731
+database: crud_app
+
+//Create Database
+
+-- Crează baza de date
+CREATE DATABASE crud_app;
+
+-- Selectează baza de date
+USE crud_app;
+
+-- Crează tabelul students
+CREATE TABLE students (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    age INT NOT NULL
+);
+
+-- Inserează 5 studenți
+INSERT INTO students (name, email, age) VALUES
+('John Doe', 'john.doe@example.com', 20),
+('Jane Smith', 'jane.smith@example.com', 22),
+('Michael Johnson', 'michael.johnson@example.com', 21),
+('Emily Davis', 'emily.davis@example.com', 23),
+('William Brown', 'william.brown@example.com', 19);
+
